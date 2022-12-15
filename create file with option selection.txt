@@ -1,0 +1,52 @@
+echo select the option
+echo op1 op2 op2 op4
+read k
+#option 1
+if [ "$k" == "op1" ]
+then
+echo Enter the file
+read q
+
+mkdir $q
+cd $q
+
+for d in {1..5..1}
+do
+        mkdir file$d
+        mkdir dir$d
+done
+elif [ "$k" == "op2" ]
+then
+
+echo enter no. 1 for delete 5 files or enter any number for cancel the delete option
+read l
+if [ "$l" == "1" ]
+then
+        rm -rfv dir{1..5..1}
+else [ "$l" != "1" ]
+        echo files not delete
+fi
+elif [ "$k" == "op3" ]
+then
+for r in {1..5..1}
+do
+        touch book$r
+       printf "  Tamilnadu\n kerala\n delhi\n goa\n pondichery\n " >> book$r
+head -3 book$r
+done
+elif [ "$k" == "op4" ]
+then
+
+for j in {1..2..1}
+do
+        touch team$j
+        printf "great\n late\n choice\n word\n line\n mark\n" >> team$j
+        echo " enter the below listed name to replace"
+        " great\n late\n choice\n word\n line\n mark\n "
+        echo enter the search
+        read k
+        echo enter the replacement
+        read s
+        sed -i "s/$k/$s/g" team$j
+done
+fi
