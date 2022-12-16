@@ -1,4 +1,4 @@
-
+hi welcome
 #!/bin/bash
 if [ $a="Durai" ]
 then
