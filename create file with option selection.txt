@@ -1,6 +1,7 @@
 echo select the option
 echo op1 op2 op2 op4
 read k
+ls
 #option 1
 if [ "$k" == "op1" ]
 then
